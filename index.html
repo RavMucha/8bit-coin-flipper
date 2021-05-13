@@ -47,6 +47,17 @@
       </div>
       <button id="flipper" class="nes-btn" type="button">Play!</button>
     </div>
+    <section>
+        <dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
+          <form method="dialog">
+            <p class="title">We have a winner!</p>
+            <p><i class="nes-icon is-small star"></i> <span id='winner' class="nes-text is-success"></span> scored 10 points first &amp; won. <i class="nes-icon is-small star"></i></p>
+            <menu class="dialog-menu">
+              <button class="nes-btn is-success">Confirm & continue</button>
+            </menu>
+          </form>
+        </dialog>
+      </section>
     <script src="./app.js"></script>
   </body>
 </html>

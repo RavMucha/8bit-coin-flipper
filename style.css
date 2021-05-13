@@ -12,8 +12,12 @@
 }
 
 body {
-  background-color: #222;
+  background-color: #212529;
   color: #ddd;
+}
+
+#dialog-dark-rounded {
+    user-select: none;
 }
 
 .listContainer {
@@ -21,3 +25,11 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 600px) {
+    .listContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+  }
