@@ -1,4 +1,5 @@
 document.getElementById("flipper").onclick = click;
+var audio = new Audio('./Assets/mario.wav');
 
 var heads = 0;
 var tails = 0;
@@ -22,6 +23,7 @@ function click() {
   if (heads > 9) {
     document.getElementById('dialog-dark-rounded').style.display = 'block';
     document.getElementById("winner").innerHTML = "HEADS";
+    audio.play();
     heads = 0;
     tails = 0;
     head.innerHTML = "";
@@ -33,6 +35,7 @@ function click() {
   } else if (tails > 9) {
     document.getElementById('dialog-dark-rounded').style.display = 'block';
     document.getElementById("winner").innerHTML = "TAILS";
+    audio.play();
     heads = 0;
     tails = 0;
     head.innerHTML = "";
