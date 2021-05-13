@@ -20,7 +20,7 @@ function click() {
     tail.appendChild(coin);
   }
   if (heads > 9) {
-    document.getElementById('dialog-dark-rounded').showModal();
+    document.getElementById('dialog-dark-rounded').style.display = 'block';
     document.getElementById("winner").innerHTML = "HEADS";
     heads = 0;
     tails = 0;
@@ -31,7 +31,7 @@ function click() {
     bigCoin.classList.add("nes-icon", "trophy", "is-small");
     hw.appendChild(bigCoin);
   } else if (tails > 9) {
-    document.getElementById('dialog-dark-rounded').showModal();
+    document.getElementById('dialog-dark-rounded').style.display = 'block';
     document.getElementById("winner").innerHTML = "TAILS";
     heads = 0;
     tails = 0;

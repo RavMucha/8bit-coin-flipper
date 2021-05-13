@@ -18,6 +18,8 @@ body {
 
 #dialog-dark-rounded {
     user-select: none;
+    position: fixed;
+    top: 100px;
 }
 
 .listContainer {
