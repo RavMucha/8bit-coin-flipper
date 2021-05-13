@@ -1,0 +1,23 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); */
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url(/Assets/PressStart2P-Regular.ttf);
+}
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222;
+  color: #ddd;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

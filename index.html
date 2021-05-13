@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <meta name="author" content="Rafał Mucha" />
+    <link rel="icon" href="./Assets/coins.png" type="image/x-icon" />
+    <title>Retro Flipper</title>
+  </head>
+  <body>
+    <h2><i class="nes-logo"></i> BORED ONE DAY...</h2>
+
+    <div class="nes-container is-dark with-title">
+      <p class="title">Coin flipper game</p>
+      <p>
+        Try your luck in a coin flipper game. Choose heads or tails and start
+        flippin' with the <b>Play!</b> button. First player to hit 10x<i
+          class="nes-icon coin is-small"
+        ></i>
+        wins!
+      </p>
+      <div class="nes-container is-dark is-rounded">
+        <p class="nes-text is-primary">You've got:</p>
+        <p>
+          <a href="#" class="nes-badge"><span id="result"></span></a>
+        </p>
+        <div class="listContainer">
+          <div class="list1">
+            <ul class="nes-list is-circle">
+              <li>Tails count:<br /><span id="tailsCount"></span><br /></li>
+              <li>Heads count:<br /><span id="headsCount"></span><br /></li>
+            </ul>
+          </div>
+          <div class="list2">
+            <ul class="nes-list is-circle">
+              <li>Tails wins:<br /><span id="HW"></span><br /></li>
+              <li>Heads wins:<br /><span id="TW"></span><br /></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button id="flipper" class="nes-btn" type="button">Play!</button>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
