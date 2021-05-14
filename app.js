@@ -1,5 +1,6 @@
 document.getElementById("flipper").onclick = click;
 var audio = new Audio("./Assets/mario.wav");
+var audioCoin = new Audio("./Assets/coin.wav");
 
 var heads = 0;
 var tails = 0;
@@ -7,6 +8,8 @@ var head = document.getElementById("headsCount");
 var tail = document.getElementById("tailsCount");
 function click() {
   x = Math.floor(Math.random() * 2) == 0;
+  audioCoin.play();
+  audioCoin.playbackRate = 2.5;
   if (x) {
     heads++;
     flip("Heads");
