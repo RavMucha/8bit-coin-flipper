@@ -28,7 +28,7 @@
       <div class="nes-container is-dark is-rounded">
         <p class="nes-text is-primary">You've got:</p>
         <p>
-          <a href="#" class="nes-badge"><span id="result"></span></a>
+          <div class="nes-badge"><span id="result">___________</span></div>
         </p>
         <div class="listContainer">
           <div class="list1">
@@ -45,15 +45,19 @@
           </div>
         </div>
       </div>
+      <div class="btnContainer">
       <button id="flipper" class="nes-btn" type="button">Play!</button>
+      <div class="linkGroup">
+      <a href="https://github.com/RavMucha" target="_blank"><i class="nes-icon github"></i></a><a href="https://www.linkedin.com/in/rafa%C5%82-mucha-5b4a84110/" target="_blank"><i class="nes-icon linkedin"></i></a>
     </div>
-    <section>
+    </div>
+    <section id="modalBg">
         <dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
           <form method="dialog">
             <p class="title">We have a winner!</p>
             <p><i class="nes-icon is-small star"></i> <span id='winner' class="nes-text is-success"></span> scored 10 points first &amp; won. <i class="nes-icon is-small star"></i></p>
             <menu class="dialog-menu">
-              <button class="nes-btn is-success" onclick="document.getElementById('dialog-dark-rounded').style.display = 'none'">Confirm & continue</button>
+              <button class="nes-btn is-success" onclick="modalCloser()">Confirm & continue</button>
             </menu>
           </form>
         </dialog>
