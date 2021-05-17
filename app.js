@@ -1,12 +1,45 @@
-document.getElementById("flipper").onclick = click;
-var audio = new Audio("./Assets/mario.wav");
-var audioCoin = new Audio("./Assets/coin.wav");
+window.onload = buttonCheck();
 
 var heads = 0;
 var tails = 0;
 var head = document.getElementById("headsCount");
 var tail = document.getElementById("tailsCount");
+var hw = document.getElementById("HW");
+var tw = document.getElementById("TW");
+
+function buttonCheck() {
+  if (document.getElementById("dark_select").selectedIndex == 0) {
+    document.getElementById("flipper").style.display = "block";
+    document.getElementById("flipper2").style.display = "none";
+  }
+}
+
+document.getElementById("flipper").onclick = click;
+document.getElementById("flipper2").onclick = click;
+var audio = new Audio("./Assets/mario.wav");
+var audioCoin = new Audio("./Assets/coin.wav");
+function playerCheck() {
+  var selector = document.getElementById("dark_select").selectedIndex;
+  var badges = document.getElementsByClassName("PBadge");
+  buttonCheck();
+  if (selector == 0) {
+    badges[0].style.display = "none";
+    badges[1].style.display = "none";
+  } else {
+    badges[0].style.display = "inline";
+    badges[1].style.display = "inline";
+  }
+}
 function click() {
+  if (document.getElementById("dark_select").selectedIndex == 1) {
+    if (document.getElementById("flipper2").style.display == "none") {
+      document.getElementById("flipper2").style.display = "block";
+      document.getElementById("flipper").style.display = "none";
+    } else if (document.getElementById("flipper").style.display == "none") {
+      document.getElementById("flipper2").style.display = "none";
+      document.getElementById("flipper").style.display = "block";
+    }
+  }
   x = Math.floor(Math.random() * 2) == 0;
   audioCoin.play();
   audioCoin.playbackRate = 2.5;
@@ -25,6 +58,8 @@ function click() {
   }
   if (heads > 9) {
     document.getElementById("winner").innerHTML = "HEADS";
+    document.getElementById("winner").classList.remove("is-error");
+    document.getElementById("winner").classList.add("is-warning");
     document.getElementById("modalBg").classList.add("sectionModal");
     document.getElementById("dialog-dark-rounded").style.display = "block";
     audio.play();
@@ -32,12 +67,13 @@ function click() {
     tails = 0;
     head.innerHTML = "";
     tail.innerHTML = "";
-    let hw = document.getElementById("HW");
     let bigCoin = document.createElement("i");
     bigCoin.classList.add("nes-icon", "trophy", "is-small");
     hw.appendChild(bigCoin);
   } else if (tails > 9) {
     document.getElementById("winner").innerHTML = "TAILS";
+    document.getElementById("winner").classList.remove("is-warning");
+    document.getElementById("winner").classList.add("is-error");
     document.getElementById("modalBg").classList.add("sectionModal");
     document.getElementById("dialog-dark-rounded").style.display = "block";
     audio.play();
@@ -45,7 +81,6 @@ function click() {
     tails = 0;
     head.innerHTML = "";
     tail.innerHTML = "";
-    let tw = document.getElementById("TW");
     let bigCoin = document.createElement("i");
     bigCoin.classList.add("nes-icon", "trophy", "is-small");
     tw.appendChild(bigCoin);
@@ -66,4 +101,13 @@ function flip(coin) {
 function modalCloser() {
   document.getElementById("dialog-dark-rounded").style.display = "none";
   document.getElementById("modalBg").classList.remove("sectionModal");
+}
+
+function cleaner() {
+  heads = 0;
+  tails = 0;
+  head.innerHTML = "";
+  tail.innerHTML = "";
+  hw.innerHTML = "";
+  tw.innerHTML = "";
 }

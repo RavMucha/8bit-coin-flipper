@@ -25,6 +25,15 @@
         ></i>
         wins!
       </p>
+      <div style="background-color:#212529; padding: 1rem 1.2rem 1rem 1rem;width:calc(100% + 8px)">
+        <label for="dark_select" style="color:#fff">Choose the number of players:</label>
+        <div class="nes-select is-dark">
+          <select onclick="playerCheck()" onchange="cleaner()" required id="dark_select">
+            <option value="0">Just me.</option>
+            <option value="1">2 players.</option>
+          </select>
+        </div>
+      </div>
       <div class="nes-container is-dark is-rounded">
         <p class="nes-text is-primary">You've got:</p>
         <p>
@@ -46,16 +55,19 @@
         </div>
       </div>
       <div class="btnContainer">
-      <button id="flipper" class="nes-btn" type="button">Play!</button>
+      <button id="flipper" class="nes-btn" type="button">
+          <span  id="player1Badge" class="PBadge">Heads</span> Play!</button>
       <div class="linkGroup">
       <a href="https://github.com/RavMucha" target="_blank"><i class="nes-icon github"></i></a><a href="https://www.linkedin.com/in/rafa%C5%82-mucha-5b4a84110/" target="_blank"><i class="nes-icon linkedin"></i></a>
     </div>
+    <button id="flipper2" class="nes-btn" type="button">
+      <span  id="player2Badge" class="PBadge">Tails</span> Play!</button>
     </div>
     <section id="modalBg">
         <dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
           <form method="dialog">
             <p class="title">We have a winner!</p>
-            <p><i class="nes-icon is-small star"></i> <span id='winner' class="nes-text is-success"></span> scored 10 points first &amp; won. <i class="nes-icon is-small star"></i></p>
+            <p><i class="nes-icon is-small star"></i> <span id='winner' class="nes-text"></span> scored 10 points first &amp; won. <i class="nes-icon is-small star"></i></p>
             <menu class="dialog-menu">
               <button class="nes-btn is-success" onclick="modalCloser()">Confirm & continue</button>
             </menu>
