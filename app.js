@@ -2,6 +2,8 @@ window.onload = buttonCheck();
 
 var heads = 0;
 var tails = 0;
+var headsTrophy = 0;
+var tailsTrophy = 0;
 var head = document.getElementById("headsCount");
 var tail = document.getElementById("tailsCount");
 var hw = document.getElementById("HW");
@@ -70,6 +72,7 @@ function click() {
     let bigCoin = document.createElement("i");
     bigCoin.classList.add("nes-icon", "trophy", "is-small");
     hw.appendChild(bigCoin);
+    headsTrophy++;
   } else if (tails > 9) {
     document.getElementById("winner").innerHTML = "TAILS";
     document.getElementById("winner").classList.remove("is-warning");
@@ -84,6 +87,7 @@ function click() {
     let bigCoin = document.createElement("i");
     bigCoin.classList.add("nes-icon", "trophy", "is-small");
     tw.appendChild(bigCoin);
+    tailsTrophy++;
   }
 }
 function flip(coin) {

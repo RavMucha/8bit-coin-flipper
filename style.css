@@ -38,7 +38,7 @@ body {
 }
 
 .PBadge {
-  display:none;
+  display: none;
 }
 
 #player1Badge {
@@ -68,6 +68,10 @@ body {
 
 .coin {
   animation: jump 0.2s linear;
+}
+
+.linkGroup {
+  margin-right: 5px !important;
 }
 
 .linkGroup .nes-icon {
@@ -106,7 +110,18 @@ body {
     justify-content: space-between;
   }
 
-  #flipper {
-    width: 50%;
+  #flipper,
+  #flipper2 {
+    margin: 5px !important;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .linkGroup .nes-icon {
+    transform: scale(1.7);
+  }
+
+  .nes-logo {
+    transform: scale(0.9);
   }
 }
