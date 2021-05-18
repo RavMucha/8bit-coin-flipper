@@ -1,9 +1,39 @@
-window.onload = buttonCheck();
-
 var heads = 0;
 var tails = 0;
-var headsTrophy = 0;
-var tailsTrophy = 0;
+var headsTrophy;
+var tailsTrophy;
+
+function reseter() {
+  localStorage.clear();
+  heads = 0;
+  tails = 0;
+  headsTrophy = 0;
+  tailsTrophy = 0;
+  location.reload();
+}
+if (
+  localStorage.getItem("headsTrophy") === null ||
+  localStorage.getItem("headsTrophy") === "null"
+) {
+  headsTrophy = 0;
+} else {
+  var headsTrophyLoc = localStorage.getItem("headsTrophy");
+  headsTrophyLoc = JSON.parse(headsTrophyLoc);
+  headsTrophy = headsTrophyLoc;
+}
+if (
+  localStorage.getItem("tailsTrophy") === null ||
+  localStorage.getItem("tailsTrophy") === "null"
+) {
+  tailsTrophy = 0;
+} else {
+  var tailsTrophyLoc = localStorage.getItem("tailsTrophy");
+  tailsTrophyLoc = JSON.parse(tailsTrophyLoc);
+  tailsTrophy = tailsTrophyLoc;
+}
+
+window.onload = buttonCheck();
+
 var head = document.getElementById("headsCount");
 var tail = document.getElementById("tailsCount");
 var hw = document.getElementById("HW");
@@ -13,6 +43,16 @@ function buttonCheck() {
   if (document.getElementById("dark_select").selectedIndex == 0) {
     document.getElementById("flipper").style.display = "block";
     document.getElementById("flipper2").style.display = "none";
+  }
+  for (let i = 0; i < tailsTrophyLoc; i++) {
+    let bigCoin = document.createElement("i");
+    bigCoin.classList.add("nes-icon", "trophy", "is-small");
+    document.getElementById("TW").appendChild(bigCoin);
+  }
+  for (let i = 0; i < headsTrophyLoc; i++) {
+    let bigCoin = document.createElement("i");
+    bigCoin.classList.add("nes-icon", "trophy", "is-small");
+    document.getElementById("HW").appendChild(bigCoin);
   }
 }
 
@@ -73,6 +113,7 @@ function click() {
     bigCoin.classList.add("nes-icon", "trophy", "is-small");
     hw.appendChild(bigCoin);
     headsTrophy++;
+    localStorage.setItem("headsTrophy", JSON.stringify(headsTrophy));
   } else if (tails > 9) {
     document.getElementById("winner").innerHTML = "TAILS";
     document.getElementById("winner").classList.remove("is-warning");
@@ -81,13 +122,16 @@ function click() {
     document.getElementById("dialog-dark-rounded").style.display = "block";
     audio.play();
     heads = 0;
+    localStorage.setItem("heads", JSON.stringify(heads));
     tails = 0;
+    localStorage.setItem("tails", JSON.stringify(tails));
     head.innerHTML = "";
     tail.innerHTML = "";
     let bigCoin = document.createElement("i");
     bigCoin.classList.add("nes-icon", "trophy", "is-small");
     tw.appendChild(bigCoin);
     tailsTrophy++;
+    localStorage.setItem("tailsTrophy", JSON.stringify(tailsTrophy));
   }
 }
 function flip(coin) {

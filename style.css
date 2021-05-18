@@ -62,6 +62,12 @@ body {
   justify-content: space-between;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .trophy {
   animation: bounce 0.2s linear;
 }
@@ -123,5 +129,17 @@ body {
 
   .nes-logo {
     transform: scale(0.9);
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .is-error {
+    width: 100%;
+  }
+  .nes-badge {
+    width: 97.5%;
   }
 }
