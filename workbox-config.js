@@ -3,7 +3,7 @@ module.exports = {
 	globPatterns: [
 	  '**/*.{js,wav,png,txt,ttf,html,webmanifest,css}'
 	],
-	swDest: '/sw.js',
+	swDest: '/service-worker.js',
   
 	// Define runtime caching rules.
 	runtimeCaching: [{
