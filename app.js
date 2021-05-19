@@ -154,6 +154,10 @@ function modalCloser() {
 function cleaner() {
   heads = 0;
   tails = 0;
+  headsTrophy = 0;
+  tailsTrophy = 0;
   head.innerHTML = "";
   tail.innerHTML = "";
+  hw.innerHTML = "";
+  tw.innerHTML = "";
 }
