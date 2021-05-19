@@ -1,9 +1,9 @@
 module.exports = {
-	globDirectory: '/',
+	globDirectory: 'C:/Users/rmucha/Documents/GitHub/NES.css/',
 	globPatterns: [
 	  '**/*.{js,wav,png,txt,ttf,html,webmanifest,css}'
 	],
-	swDest: '/sw.js',
+	swDest: 'C:/Users/rmucha/Documents/GitHub/NES.css/sw.js',
   
 	// Define runtime caching rules.
 	runtimeCaching: [{

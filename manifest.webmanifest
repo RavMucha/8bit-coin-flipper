@@ -3,7 +3,7 @@
     "background_color": "#212529",
     "display": "standalone",
     "scope": "/",
-    "start_url": "https://nes-coins.netlify.app",
+    "start_url": "/",
     "name": "Retro Coin Flipper",
     "short_name": "8bit Coinz",
     "description": "This is a coin flipper game, styled to resemble 8-bit graphics, like on the NES console, sounds included.",
