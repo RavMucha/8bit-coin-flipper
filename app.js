@@ -156,6 +156,4 @@ function cleaner() {
   tails = 0;
   head.innerHTML = "";
   tail.innerHTML = "";
-  hw.innerHTML = "";
-  tw.innerHTML = "";
 }
