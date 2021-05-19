@@ -19,7 +19,7 @@
 
     <div class="nes-container is-dark with-title">
       <p class="title">Coin flipper game</p>
-      <p>
+      <p class="nes-text is-disabled">
         Try your luck in a coin flipper game. Choose heads or tails and start
         flippin' with the <b>Play!</b> button. First player to hit 10x<i
           class="nes-icon coin is-small"
@@ -29,7 +29,7 @@
       <div style="background-color:#212529; padding: 1rem 1.2rem 1rem 1rem;width:calc(100% + 8px)">
         <label for="dark_select" style="color:#fff">Choose the number of players:</label>
         <div class="nes-select is-dark">
-          <select onclick="playerCheck()" onchange="cleaner()" required id="dark_select">
+          <select onchange="cleaner();playerCheck()" required id="dark_select">
             <option value="0">Just me.</option>
             <option value="1">2 players.</option>
           </select>
