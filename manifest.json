@@ -1,0 +1,38 @@
+{
+    "theme_color": "#e59400",
+    "background_color": "#212529",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "index.html",
+    "name": "Retro Coinz",
+    "app_name": "Retro Coinz",
+    "short_name": "RetroCoinz",
+    "description": "This is a coin flipper game, styled to resemble 8-bit graphics, like on the NES console, sounds included.",
+    "icons": [
+        {
+            "src": "/Assets/Icons/icon-72-72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/Assets/Icons/icon-96-96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/Assets/Icons/icon-144-144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/Assets/Icons/icon-192-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/Assets/Icons/icon-512-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
