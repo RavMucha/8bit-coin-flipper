@@ -12,7 +12,8 @@ const assets = [
   "/Assets/Icons/icon-96-96.png",
   "/Assets/Icons/icon-144-144.png",
   "/Assets/Icons/icon-192-192.png",
-  "/Assets/Icons/icon-512-512.png"
+  "/Assets/Icons/icon-512-512.png",
+  "/Assets/Icons/maskable_icon_x384.png"
 ]
 
 self.addEventListener("install", installEvent => {
